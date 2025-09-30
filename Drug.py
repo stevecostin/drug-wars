@@ -2,8 +2,6 @@ class Drug:
     def __init__(self) -> None:
         self.price = 0
         self.possess_num_of_grams = 0
-        self.long_name = ""
-        self.
 
     def set_price_per_gram(self, price: int) -> None:
         self.price = price
@@ -16,6 +14,9 @@ class Drug:
 
     def remove_drug_from_possession(self, num_of_grams: int) -> None:
         self.possess_num_of_grams -= num_of_grams
+
+    def get_drug_possession(self) -> int:
+        return self.possess_num_of_grams
 
 
 class Weed(Drug):
