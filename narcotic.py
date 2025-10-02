@@ -1,11 +1,11 @@
 # Narcotic should only be inherited from another class
 class Narcotic:
-    def __init__(self, long_name: str, short_name: tuple, can_kill_you: bool) -> None:
+    def __init__(self, long_name: str, short_name: tuple, overdose_can_kill_you: bool) -> None:
         self.price = 0
         self.possess_num_of_grams = 0
         self.long_name = long_name
         self.short_name = short_name
-        self.can_kill_you = can_kill_you
+        self.overdose_can_kill_you = overdose_can_kill_you
 
     def __eq__(self, other) -> bool:
         if isinstance(other, Narcotic):
@@ -34,16 +34,16 @@ class Narcotic:
     def get_narcotic_possession(self) -> int:
         return self.possess_num_of_grams
 
-    def set_can_kill_you(self,  can_kill_you: bool) -> None:
-        self.can_kill_you = can_kill_you
+    def set_overdose_can_kill_you(self,  overdose_can_kill_you: bool) -> None:
+        self.overdose_can_kill_you = overdose_can_kill_you
 
-    def get_can_kill_you(self) -> bool:
-        return self.can_kill_you
+    def get_overdose_can_kill_you(self) -> bool:
+        return self.overdose_can_kill_you
 
 
 class Weed(Narcotic):
     def __init__(self):
-        super().__init__("Marijuana", ("Weed", "Ganja"), False)
+        super().__init__("Marijuana", ("Weed", "Ganja", "Joint", "Spliff"), False)
 
 
 class Cocaine(Narcotic):
@@ -54,3 +54,8 @@ class Cocaine(Narcotic):
 class Methamphetamine(Narcotic):
     def __init__(self):
         super().__init__("Methamphetamine", ("Meth", "Crystal"), True)
+
+
+class Cigarette(Narcotic):
+    def __init__(self):
+        super().__init__("Cigarette", ("Cig", "Fag"), False)
