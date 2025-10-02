@@ -2,7 +2,7 @@ from game import Game
 from player import Player
 
 def main():
-    print("Welcome to Drug Wars!\n")
+    print("Welcome to Narcotic Wars!\n")
     print("How many players are there?")
     player_count: int = int(input())
     print()

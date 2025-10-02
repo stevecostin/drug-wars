@@ -1,4 +1,4 @@
-from drug import Drug
+from narcotic import Narcotic
 
 class Player:
     def __init__(self, name: str, age: int) -> None:
@@ -15,14 +15,14 @@ class Player:
     def get_age(self) -> int:
         return self.age
 
-    def add_drug(self, drug: Drug) -> None:
+    def add_narcotic(self, narcotic: Narcotic) -> None:
         pass
 
-    def remove_drug(self) -> None:
+    def remove_narcotic(self) -> None:
         pass
 
-    def get_drug(self, index: int) -> Drug:
+    def get_narcotic(self, index: int) -> Narcotic:
         pass
 
-    def get_drugs(self) -> Drug:
+    def get_narcotics(self) -> Narcotic:
         pass
