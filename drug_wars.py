@@ -1,5 +1,5 @@
-from Game import Game
-from Player import Player
+from game import Game
+from player import Player
 
 def main():
     print("Welcome to Drug Wars!\n")
